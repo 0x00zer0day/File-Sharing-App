@@ -21,11 +21,11 @@ public class MyFile {
 
     public void setData(byte[] data) {
         this.data = data;
-        public void setFileExtension(String fileExtension){
-            this.fileExtension = fileExtension;
-        }
-        public int getId() {
-            return id;
-        }
+    }
+    public void setFileExtension(String fileExtension){
+        this.fileExtension = fileExtension;
+    }
+    public int getId() {
+        return id;
     }
 }
