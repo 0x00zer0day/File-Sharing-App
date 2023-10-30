@@ -18,7 +18,7 @@ public class Client {
         jFrame.setLayout(new BoxLayout(jFrame.getContentPane(),BoxLayout.Y_AXIS));
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JLabel jlTittle = new JLabel("Clint side");
+        JLabel jlTittle = new JLabel("Client side");
         jlTittle.setFont(new Font("Arial",Font.BOLD,25));
         jlTittle.setBorder(new EmptyBorder(20,0,10,0));
         jlTittle.setAlignmentX(Component.CENTER_ALIGNMENT);
