@@ -1,4 +1,4 @@
-public class MyFile {
+public class    MyFile {
     private int id;
     public String name;
     public byte[] data;
@@ -28,4 +28,7 @@ public class MyFile {
     public int getId() {
         return id;
     }
+    public String getName() {return name;}
+    public byte[] getData() {return data;}
+    public String getExtension() {return fileExtension;}
 }

@@ -1,16 +1,11 @@
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
-import java.io.*;
-import java.net.*;
 import java.net.Socket;
 import java.net.ServerSocket;
 import java.util.ArrayList;
@@ -40,10 +35,11 @@ public class Server {
                 jFrame.add(jScrollPane);
                 jFrame.setVisible(true);
 
-                ServerSocket serverSocket = new ServerSocket(1234);
+
 
                 while (true) {
                         try {
+                                ServerSocket serverSocket = new ServerSocket(1234);
                                 Socket socket = serverSocket.accept();
                                 DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
                                 int fileNameLength  = dataInputStream.readInt();
@@ -94,7 +90,7 @@ public class Server {
 
         public static MouseListener getMyMouseListener() {
 
-                return new MouseListener() {
+                return new MouseAdapter() {
                         @Override
                         public void mouseClicked(MouseEvent e) {
                                 JPanel jPanel = (JPanel) e.getSource();
